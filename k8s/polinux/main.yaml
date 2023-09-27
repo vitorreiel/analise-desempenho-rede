@@ -9,7 +9,6 @@ spec:
     resources:
       requests:
         memory: "200Mi"
-        cpu: "
       limits:
         memory: "300Mi"
     command: ["stress"]
