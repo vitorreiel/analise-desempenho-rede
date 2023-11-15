@@ -27,7 +27,7 @@ while [ $execution_count -le 20 ]; do
   cpu_usage=$(top -b -n 1 | grep "Cpu(s)" | awk '{print int($2)}')
   mem_usage=$(free -m | awk '/Mem/{print $3}')
   mem_free=$(free -m | awk '/Mem/{print $4}')
-  echo "$id,$execution_count,$elapsed_time,$cpu_usage,$mem_usage,$mem_free,DockerSwarm,$polinux,$app,t2.large" >> cpu_usage_report.txt
+  echo "$id,$execution_count,$elapsed_time,$cpu_usage,$mem_usage,$mem_free,DockerSwarm,$polinux,$app,t2.large" >> cpu_mem_usage_report.txt
   execution_count=$((execution_count + 1))
   id=$((id + 1))
   sleep 5
